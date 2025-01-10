@@ -6,8 +6,7 @@ const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const parseDay = (day) => {
   const dayNumber = (element) => day.startsWith(element.toLowerCase());
-  const dayIndex = days.findIndex(dayNumber);
-  return dayIndex + 1 || -1;
+  return days.findIndex(dayNumber) + 1 || -1;
 };
 
 module.exports = parseDay;
