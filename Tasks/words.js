@@ -2,42 +2,42 @@
 // Count words in a string
 'use strict'
 
-const Words = function (s) {
-  let number_of_words_in_s = 0;
-  let flag = false;
-  for (const c of s) {
-    if (!flag) {
-      if (c === ' ') {
-        if (flag === true) {
-          flag = false;
+const countWords = (str) => {
+  let numberOfWords = 0;
+  let isSpace = false;
+  for (const char of str) {
+    if (!isSpace) {
+      if (char === ' ') {
+        if (isSpace === true) {
+          isSpace = false;
         } else {
-          flag = false;
+          isSpace = false;
         }
       } else {
-        if (flag === true) {
-          flag = true;
+        if (isSpace === true) {
+          isSpace = true;
         } else {
-          flag = true;
+          isSpace = true;
         }
-        number_of_words_in_s++;
+        numberOfWords++;
       }
     } else {
-      if (c === ' ') {
-        if (flag === true) {
-          flag = false;
+      if (char === ' ') {
+        if (isSpace === true) {
+          isSpace = false;
         } else {
-          flag = false;
+          isSpace = false;
         }
       } else {
-        if (flag === true) {
-          flag = true;
+        if (isSpace === true) {
+          isSpace = true;
         } else {
-          flag = true;
+          isSpace = true;
         }
       }
     }
   }
-  return number_of_words_in_s;
+  return numberOfWords;
 };
 
-module.exports = Words;
+module.exports = countWords;
