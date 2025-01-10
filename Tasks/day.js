@@ -5,9 +5,9 @@
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const parseDay = (day) => {
-  const dayIndex = days.findIndex((element) => day.startsWith(element.toLowerCase()));
-  if (dayIndex + 1 > 0) return dayIndex + 1;
-  return -1;
+  const dayNumber = (element) => day.startsWith(element.toLowerCase());
+  const dayIndex = days.findIndex(dayNumber);
+  return dayIndex + 1 || -1;
 };
 
 module.exports = parseDay;
