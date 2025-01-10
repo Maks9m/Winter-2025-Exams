@@ -19,8 +19,7 @@ const months = [
 
 const GetMonthNumber = (month) => {
   const monthNumber = (element) => month.toLowerCase().startsWith(element);
-  const result = months.findIndex(monthNumber) + 1;
-  return result > 0 ? result : -1;
+  return months.findIndex(monthNumber) + 1 || -1;
 };
 
 module.exports = GetMonthNumber;
