@@ -4,36 +4,20 @@
 
 const countWords = (str) => {
   let numberOfWords = 0;
-  let isSpace = false;
+  let isWord = false;
   for (const char of str) {
-    if (!isSpace) {
+    if (!isWord) {
       if (char === ' ') {
-        if (isSpace === true) {
-          isSpace = false;
-        } else {
-          isSpace = false;
-        }
+        isWord = false;
       } else {
-        if (isSpace === true) {
-          isSpace = true;
-        } else {
-          isSpace = true;
-        }
+        isWord = true;
         numberOfWords++;
       }
     } else {
       if (char === ' ') {
-        if (isSpace === true) {
-          isSpace = false;
-        } else {
-          isSpace = false;
-        }
+        isWord = false;
       } else {
-        if (isSpace === true) {
-          isSpace = true;
-        } else {
-          isSpace = true;
-        }
+        isWord = true;
       }
     }
   }
