@@ -5,12 +5,8 @@
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const parseDay = (day) => {
-  let i;
-  for (i = 0; i < days.length; i++) {
-    if (day.startsWith(days[i].toLowerCase())) {
-      return i + 1;
-    }
-  }
+  const dayIndex = days.findIndex((element) => day.startsWith(element.toLowerCase()));
+  if (dayIndex + 1 > 0) return dayIndex + 1;
   return -1;
 };
 
