@@ -2,18 +2,18 @@
 // Count words in a string
 'use strict'
 
-const countWords = (str) => {
-  let numberOfWords = 0;
+const words = (str) => {
+  let wordsCounter = 0;
   let isWord = false;
   for (const char of str) {
     if (char !== ' ') {
-      if (!isWord) numberOfWords++;
+      if (!isWord) wordsCounter++;
       isWord = true;
       continue;
     }
     isWord = false;
   }
-  return numberOfWords;
+  return wordsCounter;
 };
 
-module.exports = countWords;
+module.exports = words;
