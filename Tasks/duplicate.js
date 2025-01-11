@@ -1,16 +1,13 @@
 // Refactor following solution
-// Return an array without duplicates
-'use strict'
+// Return an array with duplicates
+'use strict';
 
-const duplicate = (value, N) => {
-  if (N <= 0) return [];
-  else {
-    const res = [];
-    for (let i = 0; i < N; i++) {
-      res[i] = value;
-    }
-    return res;
+const duplicate = (value, amount) => {
+  const result = [];
+  for (let i = 0; i < amount; i++) {
+    result[i] = value;
   }
+  return result;
 };
 
 module.exports = duplicate;
