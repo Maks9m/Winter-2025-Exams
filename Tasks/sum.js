@@ -3,12 +3,10 @@
 'use strict';
 
 const sum = (arr) => {
-  let sumResolt = 0;
-  sumResolt = arr.reduce(
+  return arr.reduce(
     (acc, value) => (typeof value === 'number' ? (acc += value) : acc),
-    sumResolt,
+    0,
   );
-  return sumResolt;
 };
 
 module.exports = sum;
