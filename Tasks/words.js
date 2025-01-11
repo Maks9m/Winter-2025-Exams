@@ -4,8 +4,7 @@
 
 const words = (str) => {
   if (str === '') return 0;
-  const arrayOfWords = str.trim().split(' ');
-  return arrayOfWords.length;
+  return str.trim().split(/\s+/).length;
 };
 
 module.exports = words;
