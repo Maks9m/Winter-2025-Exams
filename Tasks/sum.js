@@ -4,11 +4,10 @@
 
 const sum = (arr) => {
   let sumResolt = 0;
-  for (const element of arr) {
-    if (typeof element === 'number') {
-      sumResolt += element;
-    }
-  }
+  sumResolt = arr.reduce(
+    (acc, value) => (typeof value === 'number' ? (acc += value) : acc),
+    sumResolt,
+  );
   return sumResolt;
 };
 
