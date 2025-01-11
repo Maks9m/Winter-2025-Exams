@@ -3,17 +3,9 @@
 'use strict'
 
 const words = (str) => {
-  let wordsCounter = 0;
-  let isWord = false;
-  for (const char of str) {
-    if (char !== ' ') {
-      if (!isWord) wordsCounter++;
-      isWord = true;
-      continue;
-    }
-    isWord = false;
-  }
-  return wordsCounter;
+  if (str === '') return 0;
+  const arrayOfWords = str.trim().split(' ');
+  return arrayOfWords.length;
 };
 
 module.exports = words;
