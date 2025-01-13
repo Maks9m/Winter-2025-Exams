@@ -2,7 +2,7 @@
 // Get month number
 'use strict';
 
-const months = [
+const MONTHS = [
   'jan',
   'feb',
   'mar',
@@ -19,7 +19,7 @@ const months = [
 
 const GetMonthNumber = (month) => {
   const monthNumber = (element) => month.toLowerCase().startsWith(element);
-  return months.findIndex(monthNumber) + 1 || -1;
+  return MONTHS.findIndex(monthNumber) + 1 || -1;
 };
 
 module.exports = GetMonthNumber;
