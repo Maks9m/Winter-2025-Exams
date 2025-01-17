@@ -17,9 +17,9 @@ const MONTHS = [
   'dec',
 ];
 
-const GetMonthNumber = (month) => {
+const getMonthNumber = (month) => {
   const monthNumber = (element) => month.toLowerCase().startsWith(element);
   return MONTHS.findIndex(monthNumber) + 1 || -1;
 };
 
-module.exports = GetMonthNumber;
+module.exports = getMonthNumber;

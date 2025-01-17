@@ -3,7 +3,7 @@
 'use strict';
 
 const duplicate = (value, amount) => {
-  const result = [];
+  const result = new Array(amount);
   for (let i = 0; i < amount; i++) {
     result[i] = value;
   }
